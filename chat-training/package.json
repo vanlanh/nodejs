@@ -1,0 +1,11 @@
+{
+    "name": "chat_socketio",
+    "description": "chat socketio",
+    "version": "0.0.1",
+    "main": "index.js",
+    "author": "VanLanh",
+    "dependencies": {
+        "express": "3.x",
+        "socketio" : "latest"
+        }
+}

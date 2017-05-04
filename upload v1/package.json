@@ -1,0 +1,11 @@
+{
+    "name": "upload v1",
+    "description": "upload file",
+    "version": "0.0.1",
+    "main": "index.js",
+    "author": "VanLanh",
+    "dependencies": {
+        "express": "3.x",
+        "socketio" : "latest"
+        }
+}

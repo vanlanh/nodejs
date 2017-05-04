@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, Tahoma;
+    font-size: 12px;
+    background: url(../img/bg.png) no-repeat;
+    background-size: 100%;
+}
+ 
+#page {
+  	width: 800px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header {
+    height: 100px;
+    width: 750px;
+    border: 1px solid #CDCDCD;
+    color: #1E90FF;
+    margin-bottom:5px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100%;
+    text-indent: -9999999px;
+}
+
+#header h1 {
+    text-align: center;
+    margin-top: -65px;
+}
+
+#txtUser {
+    width: 200px;
+}
+
+.block {
+    width: 100%;
+    clear: both;
+}
+
+#left {
+    width: 150px;
+    min-height: 480px;
+    border: 1px solid #CDCDCD;
+    float:left;
+    background-color: white;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+#right {
+    width: 593px;
+    min-height: 480px;
+    border: 1px solid #CDCDCD;
+    background-color: white;
+    float:left;
+    margin: 10px 5px 5px;
+}
+
+#txtMessage, #btnChat{
+    float: left;
+    margin: 2px;
+}
+
+#txtMessage{
+    width: 70%;
+}
+
+#btnChat{
+    width: 25%;
+}
+
+#title{
+    background-color: #ccf900;
+    text-align: center;
+    padding: 5px;
+}
+
+.hoten{
+    color: red;
+    font-weight: bold;
+}
+
+#dsMsg{
+    height: 450px;
+    overflow-y: scroll;
+    clear: both;
+}
