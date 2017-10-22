@@ -1,0 +1,56 @@
+body{
+	margin: 0 auto;
+	background: url("../image/bg2.jpg") no-repeat;
+	background-size: 100%;
+}
+
+#inner{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#logo{
+	display: block;
+	width: 500px;
+	font-size: 40px;
+	margin: 20px 0px;
+}
+
+#logo a{
+	text-decoration: none;
+	color: black;
+	font-family: bold;
+}
+
+#td h1{
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	margin: 50px 0px;
+}
+
+.ip{
+	font-size: 25px;
+	color: white;
+	margin: 0px 240px;
+}
+
+.ip input{
+	width: 230px;
+	height: 30px;
+}
+
+#ip2{
+	margin: 0px 16px;
+}
+
+#is{
+	font-size: 20px;
+	margin: 10px 0px 200px 390px;
+}
+
+#footer h1{
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}

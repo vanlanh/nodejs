@@ -1,0 +1,53 @@
+body{
+	margin: 0 auto;
+	background: url("../image/bg2.jpg") no-repeat;
+	background-size: 100%;
+}
+
+#inner{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#logo{
+	display: block;
+	width: 500px;
+	font-size: 40px;
+	margin: 20px 0px;
+}
+
+#logo a{
+	text-decoration: none;
+	color: black;
+	font-family: bold;
+}
+
+h1{
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+#main{
+	margin-bottom: 380px;
+}
+
+#back{
+	font-size: 30px;
+	color: white;
+}
+
+#man-t{
+	margin: 100px 235px;
+}
+
+#man-t tr td{
+	color: white;
+}
+
+#footer h1{
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}

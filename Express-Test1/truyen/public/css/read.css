@@ -1,0 +1,54 @@
+body{
+	margin: 0 auto;
+	background: url("../image/bg2.jpg") no-repeat;
+	background-size: 1000%;
+}
+
+#inner{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#logo{
+	display: block;
+	width: 500px;
+	font-size: 40px;
+	margin: 20px 0px;
+}
+
+#logo a{
+	text-decoration: none;
+	color: black;
+	font-family: bold;
+}
+
+#inner h1{
+	font-size: 40px;
+	margin: 90px 0px;
+	text-align: center;
+	color: white;
+}
+
+#nd{
+	margin: 90px 0px;
+}
+
+#nd p{
+	font-size: 20px;
+	width: 100%;
+	margin: 30px 0px;
+}
+
+/* #nd h2{
+	font-size: 30px;
+	text-align: center;
+	color: white;
+} */
+
+#footer h1{
+	font-size: 30px;
+	color: white;
+	margin: 10px 0px;
+	text-align: center;
+}

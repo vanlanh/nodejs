@@ -1,4 +1,4 @@
-var host = '172.50.23.76';
+var host = '10.229.163.230';
 var port = 8085;
 var httpLib = require('http');
 var fs = require('fs');

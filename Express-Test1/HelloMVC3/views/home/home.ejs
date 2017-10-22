@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>This is home</title>
+        <link rel="stylesheet" href='../public/css/stylesheet.css'>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <!-- <img src="../public/img/img.jpg" alt="image" height="300" width="600"> -->
+        
+        <div class="mydiv">
+
+            <div class="form">
+                <h3>Thao tác</h3>
+                <form method="post" action="/insert" id="form">
+                    <fieldset>
+                        <legend>Thêm thông tin người dùng</legend>
+                        <label for="lastname">Họ và chữ lót:</label>
+                        <input type="text" id="lastname" name="lastname">
+    
+                        <label for="firstname">Tên:</label>
+                        <input type="text" id="firstname" name="firstname">
+
+                        <label for="birthday">Tuổi:</label>
+                        <input type="text" id="birthday" name="birthday">
+
+                        <label for="gender">Giới tính:</label>
+                        <select id="gender" name="gender">
+                            <option value="0">Nam</option>
+                            <option value="1">Nữ</option>
+                        </select>
+
+                        <input type="submit" name="insertbtn" id="insertbtn" value="Thêm mới">
+                        <input type="submit" name="updatebtn" id="updatebtn" value="Chỉnh sửa">
+                        <input type="submit" name="deletebtn" id="deletebtn" value="Xóa">
+                    </fieldset>
+                    
+                </form>
+            </div>
+            <table style="width:100%; " class="mytable" id="mytable">
+                <tr>
+                    <th class="col-select">Chọn</th>
+                    <th>Mã người dùng</th>
+                    <th>Họ</th>
+                    <th>Tên</th> 
+                    <th>Giới tính</th>
+                    <th>Tuổi</th>
+                </tr>
+                <% rs.forEach(function(student){ %>
+                    <tr>
+                        <td style="width: 40px"><input type="checkbox" name="check" class="check"></td>
+                        <td><%- student.id %></td>
+                        <td><%- student.lastname %></td>
+                        <td><%- student.firstname %></td>
+                        <% if(student.gender == 0) {%>
+
+                        <td>Nam</td>
+
+                        <% } else { %>
+
+                        <td>Nữ</td>
+
+                        <% } %>
+                        <td><%- student.birthday %></td>    
+                    </tr>
+                <% }); %>
+            </table> 
+            <span>Danh sách này có: <span><%- rs.length %> người dùng</span></span><br>
+            <a href="/home">Tải lại trang</a>
+        </div>
+        
+        <script>
+
+            //Disable Update and Delete button by default
+            $(document).ready(function() {
+                $("#updatebtn").attr("disabled", "disabled")
+                $("#deletebtn").attr("disabled", "disabled")
+            })
+
+            //Raising click event on table checkbox
+            $(".check").click(function(e) {
+                var $item = $(this).closest("tr").find("nr").text()
+            })
+
+            //Raising click event on Insert button
+            $("#insertbtn").click(function(e) {
+               // e.preventDefault()
+
+                var lastname = $("#lastname").val().trim()
+                var firstname = $("#firstname").val().trim()
+                var birthday = $("#birthday").val().trim()
+
+                if(lastname === "" || firstname === "" ) {
+                    alert("Không được bỏ trông dữ liệu")
+                    return;
+                }
+                else {
+                    $("#form").submit()
+                }
+            })
+        </script>
+    </body>
+</html>

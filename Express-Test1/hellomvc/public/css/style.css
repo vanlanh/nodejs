@@ -1,0 +1,9 @@
+h1,p{
+    text-align: center;
+    color: red;
+}
+img{
+    width: 1200px;
+    height: 1000px;
+    position: inherit;
+}
