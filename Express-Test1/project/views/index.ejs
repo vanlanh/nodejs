@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang Chủ</title>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="content-language" content="vi" />
+    <link href="favicon.ico" rel="shortcut icon" type="../public/image/logo.png" />
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <meta charset="utf-8">
+    <!-- jQuery library (served from Google) -->
+	<script type="text/javascript" src="../public/js/map.js"></script>
+	<script src="../public/js/home.js"></script>
+	<script type="text/javascript" src="../public/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+ <!--scripts truyền biến lấy địa điểm-->
+ <script type="text/javascript">
+	$(function(){
+	 $(".location").click(function () {
+		 var text = $(this).text();
+		 $("#pac-input").val(text);
+	 });
+ });
+	 </script>
+	 <!--scripts truyền biến lấy địa điểm-->
+	 <div class="container">
+	   <div class="header">
+		 <div class="inner">
+		   </div>
+	   </div>
+	   <!--header-->
+	   <div class="inner">
+		 <div class="menu">
+			 <ul>
+			   <li><a href="index.html">Trang Chủ</a></li>
+			   <li><a href="lienhe.html">Liên Hệ</a></li>
+			 </ul>
+		   </div>
+	   </div>
+	   <div class="content">
+		 <div class="inner">
+		   <div class="content-left">
+			 <p class="title1">Phòng Trọ</p>
+			 <ul>
+				 <!--code nodjs-->
+				 <% var i = 1; %>
+				 <% rs.forEach(function(phongtro){ %>
+
+				 
+
+			   <li class="area">
+				 <p class="images"><img src="../public/img/<%- phongtro.images %>"></p>
+				 <p class="title"><%- phongtro.title %></p>
+				 <p class="acre"><span>Diện Tích: </span> <%- phongtro.acre %> </p>
+				 <p class="price"><span>Giá: </span> <%- phongtro.price %> đồng/tháng</p>
+				 <p class="dest"><span>Mô tả: </span> <%- phongtro.dest %></p>
+				 <p class="location"><span>Vị Trí: </span><%- phongtro.location %></p>
+				 <p class="phone"><span>Điện Thoại: </span><%- phongtro.phone %></p>
+			   </li>
+			   <% i++ %>
+			<% }); %>
+			   <!--code nodjs-->
+				
+			 </ul>
+			 
+		   </div>
+		   <!--content-left-->
+ 
+		   <div class="content-right">
+			 <div class="box-search">
+			   <form>
+				 <input class="text" type="text" name="Search" placeholder="Nhập địa điểm vào đây">
+				 <input class="submit" type="submit" name="submit" value="Tìm Kiếm">
+			   </form>
+			 </div>
+			 <div class="box-map">
+			   <p class="text-box-map">Click Vào Vị Trí Phòng Trọ<br /> Để Nhập Vị Trí Vào Search Box Maps</p>
+				   <!-- div maps-->
+   <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+ <div id="map"></div>
+ <!-- Replace the value of the key parameter with your own API key. -->
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHdlI9g6YlKXUTEBp22QIP0xzqddcr4pc&libraries=places&language=vi&region=VI&callback=initMap"
+		  async defer></script>
+	 <!-- div maps-->
+			 </div>
+			 <div class="box-lienhe">
+			   <p class="title">Liên Hệ Để Đăng Kí Quảng Cáo Phòng</p>
+			   <form>
+				 <input type="text" name="name" placeholder="Nhập Tên Của Bạn">
+				 <input type="email" name="email" placeholder="Email">
+				 <input type="text" name="images" placeholder="Link hình ảnh">
+				 <input type="text" name="title" placeholder="Tiêu Đề">
+				 <input type="text" name="acre" placeholder="Diện Tích">
+				 <input type="text" name="price" placeholder="Giá">
+				 <input type="text" name="dest" placeholder="Mô Tả">
+				 <input type="text" name="location" placeholder="Vị Trí">
+				 <input class="submit" type="submit" name="submit" value="Submit">
+			   </form>
+			 </div>
+			 
+		   </div>
+		   <!--content-right-->
+ 
+		 </div>
+	   </div>
+	   <!--content-->
+	   <div class="footer">
+		 <div class="inner">
+		 <p>Phòng Trọ Huế Disigner By MNT ®®®®</p>
+		 </div>
+	   </div>
+ 
+	 </div>
+</body>
+</html>

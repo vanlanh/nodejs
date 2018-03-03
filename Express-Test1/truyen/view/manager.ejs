@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <meta charset="utf8">
+    <head>
+        <meta charset="utf8" />
         <title>Manager Story</title>
-        <link rel="stylesheet" type="text/css" href="../public/css/manager.css">
-        <link rel="shortcut icon" type="image/x-icon" href="../public/image/classbook.png">
-    </header>
+        <link rel="stylesheet" type="text/css" href="../public/css/style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="../public/image/classbook.png" />
+
+    </head>
     <body>
+    <% include header %>
         <div id="inner">
-            <div id="logo">
-                <a href="/">Truyện CDCN</a>
-            </div><!--end logo-->
 
             <div>
                 <h1>Manager Story</h1>
@@ -19,7 +18,6 @@
             <div id="main">
                 <table width="600" border="1" id="man-t">
                     <tr>
-                        <td class="select">Chọn</td>
                         <td>ID</td>
                         <td>Name</td>
                         <td>Author</td>
@@ -28,25 +26,18 @@
                     
                     <% rs.forEach(function(t){ %>
                     <tr>
-                        <td style="width: 40px"><input type="checkbox" name="select" class="select" ></td>
                         <td><%- t.ID %></td>
                         <td><%- t.Name %></td>
                         <td><%- t.Author %></td>
                         <td>
-                            <a href="../manager/update/<%- t.ID %>">Update</a> - 
+                            <a href="../manager/update/<%- t.Name_link %>">Update</a> - 
                             <a href="../manager/delete/<%- t.ID %>">Delete</a>
                         </td>
                     </tr>
                     <% }); %>
                 </table><!--end man-t-->
             </div><!--main-->
-
-            <a href="/" id="back">Trở lại trang chủ</a>
-            
-            <div id="footer">
-                <h1>Truyện CĐCN</h1>
-                <h1>Coder: Văn Lanh và Công Luận</h1>
-            </div><!--end footer-->
         </div><!--end inner-->
+        <%include footer%>
     </body>
 </html>

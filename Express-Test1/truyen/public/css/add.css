@@ -1,22 +1,33 @@
 body{
 	margin: 0 auto;
-	background: url("../image/bg2.jpg") no-repeat;
-	background-size: 100%;
+	height: auto;
+	background: url("../image/background.jpg") no-repeat;
+	background-size: 200%;
+}
+
+ul{
+	list-style: none;
+	display: inline-block;
+}
+
+a{
+	text-decoration: none;
 }
 
 #inner{
 	width: 1000px;
+	height: auto;
 	margin: 0 auto;
 }
 
 #logo{
 	display: block;
-	width: 500px;
-	font-size: 40px;
+	width: 50%;
+	font-size: 20px;
 	margin: 20px 0px;
 }
 
-#logo a{
+#logo h1 a{
 	text-decoration: none;
 	color: black;
 	font-family: bold;
@@ -35,6 +46,17 @@ body{
 	margin: 0px 240px;
 }
 
+.content{
+	font-size: 25px;
+	color: white;
+	margin: 0px 390px;
+}
+
+.content input{
+	width: 600px;
+	height: 490px;
+}
+
 .ip input{
 	width: 230px;
 	height: 30px;
@@ -44,13 +66,21 @@ body{
 	margin: 0px 16px;
 }
 
-#is{
-	font-size: 20px;
-	margin: 10px 0px 200px 390px;
+#ip3{
+	margin: 0px 22px;
 }
 
-#footer h1{
-	font-size: 30px;
-	color: white;
+#ip4{
+	margin: 0px 110px;
+}
+
+#is{
+	font-size: 20px;
+	margin: 10px 0px 50px 390px;
+}
+
+#footer{
+	background: rgba(11, 12, 12, 0.4);
+	color: #ffffff;
 	text-align: center;
 }

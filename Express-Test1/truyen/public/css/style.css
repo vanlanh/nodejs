@@ -1,127 +1,105 @@
-@media screen {
-	* { margin: 0; padding: 0; }    
-	html, body, div, span, applet, object, iframe,
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, font, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var,
-	dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		outline: 0;
-		font-weight: inherit;
-		font-style: inherit;
-		font-size: 100%;
-		font-family: inherit;
-		vertical-align: baseline;
-	}
+/***** MAIN STRUCTURE *****/
+body{
+	margin: 0 auto;
+	width: 100%;
+	background: url("../image/background.gif");
+	background-size: 100%;
+}
 
-	ul, ol {list-style: none;}
-	strong {font-weight: bold;}
 
-	article, aside, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/* new css */
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	display: inline-block;
+}
+/*header css*/
+.header-width{
+	width: 1000px;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 50px;
+	background: rgba(11, 12, 12, 0.4);
+}
+#header .logo{
+	width: 50%;
+	float: left;
+}
+#header .logo a{
+	padding-left: 20px;
+	display: block;
+	color: #ffffff;
+}
+#header .menu{
+	width: 50%;
+	overflow: hidden;
+}
+#header .menu ul li{
+	float: left;
+	width: 140px;
+}
+#header .menu ul li:hover{
+	background: rgba(11, 12, 12, 0.8);
+}
+#header .menu ul li a{
+	color: #ffffff;
+	font-size: 30px;
+}
+/*inner css*/
+#inner{
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 
-	.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-	.group { display: inline-block; clear: both; }
-	/* start commented backslash hack \*/ * html .group { height: 1%; } .group { display: block; } /* close commented backslash hack */
+#inner h1{
+	text-align: center;
+	color: white;
+}
 
-	body { font: 12px/2 "Helvetica Neue",Helvetica,Arial,sans-serif;}
+#main{
+	margin: 0px 200px;
+	color: white;
+}
+/* container css*/
+#inner .container{
+	margin-top: 50px;
+	margin: 0 auto;
+	width: 700px;
+	background: rgba(11, 12, 12, 0.4);
+	height: 100%;
+}
+#inner .container .title{
+	font-size: 25px;
+	color: #45e3da;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: arial;
+	opacity: 1;
+}
+#inner .container .truyen-tb{
+	width: 100%;
+	height: 100%;
+	color: #45e3da;
 
-	/*
-		TYPOGRAPHY
-	*/
-	h1, h2, h3, h4, h5 {}
-	a img { border: 0; }
-	a {color: #ce9702; text-decoration: none;}
-	.zoomer:active { top: 0; }
+}
+#inner .container .truyen-tb .truyen-t{
+	height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+}
+#inner .container .truyen-tb .truyen-t:hover{
+	background: #000;
+}
+#inner .container .truyen-tb .truyen-t a{
+	color: #ffffff;
+}
 
-	/***** MAIN STRUCTURE *****/
-	#page-wrap{
-		margin: 0 auto;
-		width: 100%;
-		height: 865px;
-		background: url("../image/bg2.jpg") no-repeat;
-		background-size: 100%;
-	}
-	
-	.inner{
-		width: 1000px;
-		margin: 0 auto;
-	}
-	
-	/*** HEADER ***/
-
-	#header{
-		height: 80px;
-	}
-	
-	#logo{
-		display: block;
-		width: 500px;
-		font-size: 40px;
-	}
-
-	#logo a{
-		color: black;
-		font-family: bold;
-	}
-
-	#menu{
-		float: right;
-		width: 500px;
-		margin: -80px 0px;
-	}
-
-	#ds{
-		font-size: 20px;
-		margin: 20px 0px;
-		color: white;
-	}
-
-	#manager a{
-		float: right;
-		font-size: 20px;
-		margin: -60px 200px;
-		color: white;
-	}
-
-	/*** MAIN-CONTENT ***/
-
-	#main-content{
-		margin: 80px 0px;
-		height: 500px;
-	}
-
-	#new-truyen{
-		border: 2px;
-		font-size: 20px;
-		margin: 50px 50px;
-		color: white;
-		display: block;
-	}
-
-	#truyen-tb{
-		margin: 0px 50px;
-	}
-
-	.truyen-t td{
-		font-size: 19px;
-		color: white;
-	}
-
-	.truyen-t td a{
-		font-size: 17px;
-		color: white;
-	}
-
-	/*** FOOTER ***/
-
-	#footer h1{
-		font-size: 30px;
-		color: white;
-		text-align: center;
-	}
-}/*end screen*/
+#footer{
+	background: rgba(11, 12, 12, 0.4);
+	color: #ffffff;
+	text-align: center;
+}

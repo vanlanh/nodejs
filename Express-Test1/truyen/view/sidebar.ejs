@@ -1,0 +1,19 @@
+<div class="sidebar">
+    <p class="title">Truyện mới</p>
+    <table class="truyen-tb">
+		<tr class="truyen-t">
+			<td>STT</td>
+			<td>Tên truyện</td>
+			<td>Tác giả</td>
+		</tr>
+
+		<!--Tạo vòng lặp để hiển thị danh sách truyện-->
+		<% rs.forEach(function(t){ %>
+            <tr class="truyen-t">
+            	<td><%- t.ID %></td>
+                <td><a href="/doctruyen/<%- t.Name_link%>"><%- t.Name %></a></td>
+                <td><%- t.Author %></td>
+            </tr>
+		<% }); %>
+	</table><!--end truyen-tb-->
+</div>

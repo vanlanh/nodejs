@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!--Để đường dẫn luôn luôn trỏ đúng-->
-		<!--<base href="http://localhost:3000/" />-->
+		<base href="http://localhost:3000/" />
 		<meta charset="utf-8">
 		<title>Update Story</title>
 		<link rel="stylesheet" type="text/css" href="../public/css/add.css">
@@ -11,24 +11,49 @@
 	<body>
 		<div id="inner">
 			<div id="logo">
-	            <a href="/">Truyện CDCN</a>
+	            <h1><a href="/"><img src="../public/image/classbook.png" />Truyện CĐCN</a></h1>
 	        </div><!--end logo-->
 
 			<div id="td">
 				<h1>Update Story</h1>
 			</div>
 
+			<!--Tạo form chứa dữ liệu cần chỉnh sửa-->
 			<form action="../../manager/update" method="POST" accept-charset="utf-8" enctype="application/x-www-form-urlencoded">
-				<p class="ip">Name Story: <input id="ip2" type="text" name="txtName" placeholder="Name Story" value="<%- rs.Name %>" /></p> <br />
-				<p class="ip">Name Author: <input type="text" name="txtAuthor" placeholder="Name Author" value="<%- rs.Author %>" /></p> <br />
-				<input type="hidden" name="txtID" value="<%- rs.ID %>">
+				<p class="ip">
+					ID: 
+					<input id="ip4" type="text" name="txtID" placeholder="ID" value="<%- rs.ID %>" /><!--rs là biến chứa dữ liệu lấy được ở server, rs.ID là lấy dữ liệu có trường ID cơ sở dữ liệu ra-->
+				</p> <br />
+				<p class="ip">
+					Name Story: 
+					<input id="ip2" type="text" name="txtName" placeholder="Name Story" value="<%- rs.Name %>" /><!--rs là biến chứa dữ liệu lấy được ở server, rs.Name là lấy dữ liệu có trường Name cơ sở dữ liệu ra-->
+				</p> <br />
+				<p class="ip">
+					Name Link: 
+					<input id="ip3" type="text" name="txtNameLink" placeholder="Name-link" value="<%- rs.Name_link %>" /><!--rs.Name_link là lấy dữ liệu có trường Name_link trong cơ sở dữ liệu ra-->
+				</p> <br />
+				<p class="ip">
+					Name Author: 
+					<input type="text" name="txtAuthor" placeholder="Name Author" value="<%- rs.Author %>" /><!--rs.Author là lấy dữ liệu có trường Author trong cơ sở dữ liệu ra-->
+				</p> <br />
+				<!--Thêm một thẻ input để chứa ID của truyện mà ta chỉnh sửa và cho nó ở dạng ẩn-->
+				<input type="hidden" name="txtID" value="<%- rs.ID %>" />
+				<p class="content">
+					<textarea rows="30" cols="70" name="txtContent"><%- rs.Content%>
+					</textarea><!--rs.Content là lấy dữ liệu có trường Content trong cơ sở dữ liệu ra-->
+				</p>
 				<input id="is" type="submit" name="btnUpdate" value="Update" />
 			</form>
 
-			<div id="footer">
-	            <h1>Truyện CĐCN</h1>
-	            <h1>Coder: Văn Lanh và Công Luận</h1>
-	        </div><!--end footer-->
+			<footer id="footer">
+			    <p>Coded by:</p>
+			    <ul>
+			        <li>Văn Lanh</li>
+			        <li>Đình Thành</li>
+			        <li>Bình Minh</li>
+			        <li>Công Luận</li>
+			    </ul>
+			</footer><!--end footer-->
 		</div><!--end inner-->
 	</body>
 </html>

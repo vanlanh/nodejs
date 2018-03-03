@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+
+}
+a{
+  text-decoration: none;
+}
+.header .inner{
+  height: 120px;
+  background: url(../img/banner.jpg) no-repeat;
+  border-bottom: 3px #770000 solid;
+}
+.container{
+  width: 100%;
+  background: #EEEEEE;
+  overflow: hidden;
+
+}
+.inner{
+  width: 1200px;
+  margin: 0 auto;
+}
+.content .inner{
+  background: #fdfbfb;
+  overflow: hidden;
+  border-top: 3px #770000 solid;
+}
+.content .content-left{
+  float: left;
+  width: 800px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content .content-right{
+  float: right;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.menu ul li{
+  float: left;
+  margin:20px 20px;
+
+}
+.menu ul li a{
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #888888;
+  border-radius: 10px;
+}
+.menu ul li a:hover{
+  background: #FF0000;
+  border-radius: 10px;
+}
+.menu{
+  background-color: rgba(14, 13, 13, 0.75);
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+
+.footer{
+  color: #fff;
+  background: #444444;
+  border-top: 3px #770000 solid;
+  border-bottom: 3px #770000 solid;
+}
+.footer p{
+  padding:15px 15px;
+}

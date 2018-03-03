@@ -7,43 +7,12 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../public/image/classbook.png">
 	</head>
 	<body>
-		<div id="page-wrap">
-			<div class="inner">
-				<div id="header">
-					<div id="logo">
-						<a href="/">Truyện CDCN</a>
-					</div>
-					<div id="menu">
-						<ul>
-							<li id="ds">Danh sách</li>
-							<li id="manager"><a href="../manager">Manager</a></li>
-						</ul>
-					</div><!--end menu-->
-				</div><!--end header-->
-				<div id="main-content">
-					<div id="new-truyen">
-						<h2>Truyện mới:</h2>
-					</div><!--end new-truyen-->
-					
-					<table width="600" height="100" border="1" id="truyen-tb">
-						<tr class="truyen-t">
-							<td>Tên truyện</td>
-							<td>Tác giả</td>
-						</tr>
-
-						<% rs.forEach(function(t){ %>
-						<tr class="truyen-t">
-							<td><%- t.Name %></td>
-							<td><%- t.Author %></td>
-						</tr>
-						<% }); %>
-					</table><!--end truyen-tb-->
-				</div><!--end main-content-->
-				<div id="footer">
-					<h1>Truyện CĐCN</h1>
-					<h1>Coder: Văn Lanh và Công Luận</h1>
-				</div><!--end footer-->
-			</div><!--end inner-->
-		</div><!--end page-wrap-->
+		<% include header %>
+		<div id="inner">
+			<div class="container">
+				<% include sidebar %>
+			</div><!--end container-->
+		</div><!--end inner-->
+		<% include footer %>
 	</body>
 </html>

@@ -1,0 +1,246 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+#map {
+  height: 400px;
+  width: 400px;
+  border-radius: 5px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+#target {
+  width: 345px;
+}
+/*maps*/
+
+.header .inner{
+  height: 150px;
+  background: url(/public/img/banner.jpg) no-repeat;
+  border-bottom: 3px #770000 solid;
+}
+.container{
+  width: 100%;
+  background: #EEEEEE;
+  overflow: hidden;
+
+}
+.inner{
+  width: 1200px;
+  margin: 0 auto;
+}
+.content .inner{
+  background: #fdfbfb;
+  overflow: hidden;
+  border-top: 3px #770000 solid;
+}
+.content .content-left{
+  float: left;
+  width: 800px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content .content-right{
+  float: right;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.menu ul li{
+  float: left;
+  margin:20px 20px;
+
+}
+.menu ul li a{
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #888888;
+  border-radius: 10px;
+}
+.menu ul li a:hover{
+  background: #FF0000;
+  border-radius: 10px;
+}
+.menu{
+  background-color: rgba(14, 13, 13, 0.75);
+  width: 100%;
+  overflow: hidden;
+}
+.content .content-left .area img{
+  width: 250px;
+  height: 120px;
+}
+.content .content-left .area{
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  float: left;
+  margin: 25px 8px;
+  background: #fff;
+  border:1px #000000 solid;
+  box-sizing: border-box;
+
+}
+.content .content-left .title1{
+  font-size: 35px;
+  font-weight: bold;
+  color: red;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.content .content-left .area p{
+  margin: 10px 10px;
+}
+.content .content-left .area:hover{
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.content .content-left .area span{
+  color: #000099;
+}
+.content .content-left .area .images{
+  margin: 0 0;
+}
+.content .content-left .area .title{
+  font-size: 19px;
+  font-weight: bold;
+  color: #0000FF;
+   background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+  border-radius: 5px;
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+}
+.content .content-left .area .location{
+  color: red;
+  font-size: 15px;
+  margin: 10px 5px;
+  font-weight: bold;
+  border-top: 1px dotted #000000;
+  padding-top: 5px;
+}
+.content .content-left .area .location:hover{
+  border-bottom: solid 1px #000000;
+}
+/*content-left*/
+.content .content-right .box-search{
+  margin: 15px 0;
+  margin-top: 35px;
+  margin-left: 15px;
+}
+.content .content-right .box-search .text{
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  border:solid 1px #000000;
+}
+.content .content-right .box-search .submit{
+  height: 40px;
+  width: 70px;
+  border-radius: 5px;
+  background: #0099FF;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 2px 2px;
+  border:none;
+}
+.content .content-right .text-box-map{
+  color: #0066FF;
+  margin-bottom: 10px;
+  font-size:17px;
+  margin-left: 20px;
+   background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+  border-radius: 5px;
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+}
+.content .content-right .box-lienhe .title{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 20px;
+}
+.content .content-right .box-lienhe input{
+  width: 350px;
+  height: 40px;
+  margin: 10px 0;
+  margin-left: 20px;
+  padding-left: 5px;
+
+}
+.content .content-right .box-lienhe .submit{
+  width: 100px;
+  height: 40px;
+  background: #3366FF;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+.footer{
+  color: #fff;
+  background: #444444;
+  border-top: 3px #770000 solid;
+  border-bottom: 3px #770000 solid;
+}
+.footer p{
+  padding:15px 15px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<!--Công Luận-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Đọc truyện <%- rs.Name %></title>
+		<link rel="stylesheet" type="text/css" href="../../public/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../public/css/read.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../../public/image/classbook.png" />
+	</head>
+	<body>
+		<div id="inner">
+			<%include header%>
+
+			<h1>Đọc truyện <%- rs.Name %></h1>
+
+			<div id="nd">
+				<p><%- rs.Content %></p>
+			</div><!--end nd-->
+
+			<%include footer%>
+		</div><!--end inner-->
+	</body>
+</html>

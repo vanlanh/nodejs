@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Trang Admin</title>
+        <link rel="stylesheet" href='../public/css/stylesheet.css'>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+    </head>
+    <body>
+        <!-- <img src="../public/img/img.jpg" alt="image" height="300" width="600"> -->
+        
+        <div class="mydiv" >
+
+            <div class="form" style="margin-bottom: 10px">
+                <h3>Thao tác</h3>
+                
+                <fieldset>
+                    <legend>Thêm thông tin phòng trọ</legend>
+                    <form method="post" action="/insert" id="frmInsert" class="form-inline">
+                        <div class="form-group">
+                            <label for="images">Ảnh nhà trọ:</label>
+                            <!-- <div class="col-md-2"> -->
+                            <input type="text" id="images" class="form-control" name="images">
+                            <!-- </div> -->
+                            
+        
+                            <label for="title">Tiêu đề:</label>
+                            <input type="text" id="title" class="form-control" name="title">
+
+                            <label for="acre">Diện tích:</label>
+                            <input type="text" class="form-control" id="acre" name="acre">
+
+                            <label for="price">Giá Tiền:</label>
+                            <input type="text" class="form-control" id="price" name="price">
+                            <label for="dest">Mô tả:</label>
+                            <input type="text" class="form-control" id="dest" name="dest">
+                            <label for="location">Địa Chỉ:</label>
+                            <input type="text" class="form-control" id="location" name="location">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="text" class="form-control" id="phone" name="phone">
+                            
+
+
+                            <input type="submit" name="insertbtn" class="btn btn-primary" id="insertbtn" value="Thêm mới">
+                        </div>
+                        
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>Sửa thông tin phòng trọ</legend>
+                    <form method="POST" action="/update" id="frmUpdate" class="form-inline">
+                        <div class="form-group">
+                            <label for="idUser">Mã trọ</label>
+                            <input type="text" class="form-control" id="idUser" readonly name="userId">
+                        </div>
+                        <div class="form-group">
+                            <label for="images">Ảnh nhà trọ</label>
+                            <input type="text" class="form-control" id="imagesEdit" name="images">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Tiêu đề:</label>
+                            <input type="text" class="form-control" id="titleEdit" name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="acre">Diện tích:</label>
+                            <input type="text" class="form-control" id="acreEdit" name="acre">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Giá tiền:</label>
+                            <input type="text" class="form-control" id="priceEdit" name="price">  
+                        </div>
+                        <div class="form-group">
+                            <label for="dest">Mô tả:</label>
+                            <input type="text" class="form-control" id="destEdit" name="dest">    
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Địa chỉ:</label>
+                            <input type="text" class="form-control" id="locationEdit" name="location">    
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="text" class="form-control" id="phoneEdit" name="phone">    
+                        </div>
+                            <input type="submit" name="updatebtn" id="updatebtn" class="btn btn-success" value="Chỉnh sửa">
+                    </form>
+                    
+                </fieldset>
+                <fieldset>
+                    <legend>Xóa nhà trọ</legend>
+                    <form method="POST" action="/delete" id="frmDelete" class="col-md-2">
+                        <div class="form-group">
+                            <label for="userId">Mã nhà trọ:</label>
+                            <input type="text" name="userId" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="userId" placeholder="id">
+                            
+                        </div>
+                        <input type="submit" name="deletebtn" class="btn btn-danger" id="deletebtn" value="Xóa">
+                    </form>
+                </fieldset>
+            </div>
+            <table style="width:100%;" id="mytable" class="table table-striped">
+                <tr>
+                    <th class="col-select">Chọn</th>
+                    <th>Số thứ tự</th>
+                    <th>Mã nhà trọ</th>
+                    <th>Ảnh nhà trọ</th>
+                    <th>Tiêu đề</th> 
+                    <th>Diện tích</th>
+                    <th>Giá tiền</th>
+                    <th>Mô tả</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
+                </tr>
+                <% var i = 1; %>
+                <% rs.forEach(function(phongtro){ %>
+                    <tr>
+                        <td style="width: 40px"><input type="radio" id="row<%- phongtro.id %>" name="check" class="check"></td>
+                        <td><%- i %></td>
+                        <td style="width: 40px !important"><%- phongtro.id %></td>
+                        
+                        <td><%- phongtro.images %></td>
+                        <td><%- phongtro.title %></td>
+                        <td><%- phongtro.acre %></td>
+                        <td><%- phongtro.price %></td>
+                        <td><%- phongtro.dest %></td>
+                        <td><%- phongtro.location %></td>
+                        <td><%- phongtro.phone %></td>    
+                    </tr>
+                    <% i++ %>
+                <% }); %>
+            </table> 
+            <span>Danh sách này có: <span><%- rs.length %> phòng trọ</span></span>
+            <br>
+            <a href="#" id="reloadLink">Tải lại trang (AJAX Refresh)</a>
+        </div>
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../../public/js/home.js"></script>
+        <script src="../../public/js/jquery-3.1.1.min.js"></script>
+    </body>
+</html>
